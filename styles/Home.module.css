@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main {
+  min-height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+._dashboard {
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+._dashboardVisual {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+._dashboardImage {
+  width: 800px;
+  height: 300px;
+
+  background-size: cover;
+  background-position-y: center;
+  border-radius: 10px;
+  margin-bottom: 10px;  
+
+  filter: grayscale(1);
+}
+
+._dashboardImageFilter {
+  width: 100%;
+  height: 100%;
+
+  background: rgb(0, 0, 0);
+  background: -moz-linear-gradient(
+    54deg,
+    rgba(0, 0, 0, 0.5396359227284664) 0%,
+    rgba(255, 255, 255, 0.267927239255077) 61%
+  );
+  background: -webkit-linear-gradient(
+    54deg,
+    rgba(0, 0, 0, 0.5396359227284664) 0%,
+    rgba(255, 255, 255, 0.267927239255077) 61%
+  );
+  background: linear-gradient(
+    54deg,
+    rgba(0, 0, 0, 0.5396359227284664) 0%,
+    rgba(255, 255, 255, 0.267927239255077) 61%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);
+
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: all 0.5s;
+  opacity: 1;
+}
+
+._dashboardTitle {
+  width: 800px;
+  height: 50px;
+  /* background-color: rgba(0, 0, 0, 0.05); */
+  border-radius: 10px;
+
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-bottom: 10px;
+}
+
+._dashboardTitleMain {
+  padding-bottom: 0px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+._dashboardTitleSecondary {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: rgb(125, 125, 125);
+  margin-left: 15px;
+}
+
+._dashboardTitleDropdown {
+  width: 150px;
+  height: 40px;
+  margin-left: auto;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+._dashboardTitleArrow {
+  opacity: 0.4;
+  margin-left: auto;
+  margin-right: 10px;
+  height: 50px;
+  width: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+._dashboardDetails {
+  height: 565px;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 10px;
+}
+
+._dashboardDetailsMain {
+  height: 350px;
+  border-radius: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  background-size: cover;
+  padding: 5px;
+}
+
+._dashboardDetailsInput {
+  height: 45px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: auto;
+}
+
+._dashboardOptions {
+  width: 800px;
+  height: 230px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+
+  margin-bottom: 10px;
+}
+
+._dashboardOption {
+  transition: all 0.3s;
+  width: 400px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  margin: 5px;
+  position: relative;
+  top: 0px;
+}
+
+._dashboardOption:hover {
+  transition: all 0.3s;
+  height: 225px;
+  top: -10px;
+}
+
+._dashboardOptionImage {
+  width: 382.5px;
+  height: 150px;
+  
+  background-size: cover;
+  background-position-y: center;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.5px;
+
+  filter: grayscale(1);
+}
+
+._buttons {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+._baseButton {
+  margin: 5px;
+}
+
+._player {
+  width: 100%;
+  height: 2px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background: grey;
+}
+
+._playerDot {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50%;
+  margin-top: -4px;
+}
