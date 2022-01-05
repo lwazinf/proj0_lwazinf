@@ -42,7 +42,7 @@ function Dashboard() {
             <Image height={20} width={20} alt={''} src={'/assets/images/icons/add.png'} />
           </div>
           <div className={styles._dashboardTitleMain}>
-            Your Drops
+            User Drops
           </div>
           <div className={styles._dashboardTitleDropdown}>
             <div className={styles._dashboardTitleSecondary}>
@@ -114,18 +114,47 @@ function Dashboard() {
       </div>
       <div className={styles._dashboardDetails}>
         <div className={styles._dashboardDetailsMain}>
-          <div className={styles._dashboardDetailsInput} />
+
+          <div className={styles._dashboardDetailsInput} >
+            <div className={styles._dashboardArtist1} style={{ backgroundImage: 'url("https://images.pexels.com/photos/2350325/pexels-photo-2350325.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")' }} />
+            <div className={styles._dashboardArtist1Detail}>
+              <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', }} >
+                @SoundByte • 25 <ReactCountryFlag countryCode="ES" svg style={{ marginLeft: '5px' }} />
+              </div>
+              <div className={styles._truncate} style={{ fontFamily: "'Open Sans Condensed', sans-serif", fontWeight: '500', fontSize: '16px', color: 'grey' }} >
+              My brothers love your drums, wanna collabo?
+              </div>
+            </div>
+            <div className={styles._dashboardTitleArrow1}>
+              <Image height={14} width={14} alt={''} src={'/assets/images/icons/down_arrow.png'} />
+            </div>
+          </div>
+
+          <div className={styles._dashboardDetailsInput} >
+            <div className={styles._dashboardArtist1} style={{ backgroundImage: 'url("https://images.pexels.com/photos/1238949/pexels-photo-1238949.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")' }} />
+            <div className={styles._dashboardArtist1Detail}>
+              <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', }} >
+                @Digit_All • 32 <ReactCountryFlag countryCode="ZW" svg style={{ marginLeft: '5px' }} />
+              </div>
+              <div className={styles._truncate} style={{ fontFamily: "'Open Sans Condensed', sans-serif", fontWeight: '500', fontSize: '16px', color: 'grey' }} >
+              Let&#39;s collaborate, I need your sound!
+              </div>
+            </div>
+            <div className={styles._dashboardTitleArrow1}>
+              <Image height={14} width={14} alt={''} src={'/assets/images/icons/down_arrow.png'} />
+            </div>
+          </div>
         </div>
         <div className={styles._dashboardDetailsSecondary}>
           <div className={styles._dashboardDetailsSecondaryTitle}>
             <div style={{ opacity: '0.6', marginTop: '5px', marginRight: '10px' }}>
               <Image height={20} width={20} alt={''} src={'/assets/images/icons/location.png'} />
             </div>
-            Artists Nearby
+            Artists Near You
           </div>
           <div className={styles._dashboardArtistsTertiary}>
             <div className={styles._dashboardArtists}>
-              <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/2350325/pexels-photo-2350325.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")', backgroundPositionY: '-20px' }} />
+              <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/2350325/pexels-photo-2350325.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")', backgroundPositionY: 'center' }} />
               <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/2802811/pexels-photo-2802811.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
               <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/758907/pexels-photo-758907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
               <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/1238949/pexels-photo-1238949.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")' }} />
@@ -138,6 +167,6 @@ function Dashboard() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
