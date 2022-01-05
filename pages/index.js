@@ -23,8 +23,9 @@ function Dashboard() {
   return (
     <div className={styles._dashboard}>
       <div className={styles._dashboardVisual}>
-        <div className={styles._dashboardImage} style={{ backgroundImage: 'url("https://images.pexels.com/photos/1306791/pexels-photo-1306791.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")', filter: 'none'}}>
-          <div className={styles._dashboardImageHolder}>
+        <div className={styles._dashboardImage} style={{ backgroundImage: 'url("https://images.pexels.com/photos/1306791/pexels-photo-1306791.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")', filter: 'none' }}>
+          <div className={styles._dashboardImageContainer}>
+
             <div className={styles._dashboardImageProfile} style={{ backgroundImage: 'url("https://images.pexels.com/photos/1097470/pexels-photo-1097470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")', filter: 'none', backgroundPositionX: '-60px' }} />
             <div className={styles._dashboardImageDetail}>
               @LwaziNF • 28 <ReactCountryFlag countryCode="ZA" svg style={{ marginLeft: '5px' }} />
@@ -32,6 +33,7 @@ function Dashboard() {
             <div className={styles._dashboardImageDetail1}>
               Lwazi Ndlovu, seasoned drummer.
             </div>
+
           </div>
         </div>
 
@@ -68,7 +70,7 @@ function Dashboard() {
             </div>
           </div>
         </div>
-        
+
         <div className={styles._dashboardOptions}>
           <div className={styles._dashboardOption}>
             <div className={styles._dashboardOptionImage} style={{ backgroundImage: 'url("https://images.pexels.com/photos/1362371/pexels-photo-1362371.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")' }}>
@@ -120,6 +122,19 @@ function Dashboard() {
               <Image height={20} width={20} alt={''} src={'/assets/images/icons/location.png'} />
             </div>
             Artists Nearby
+          </div>
+          <div className={styles._dashboardArtistsTertiary}>
+            <div className={styles._dashboardArtists}>
+              <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/2350325/pexels-photo-2350325.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")', backgroundPositionY: '-20px' }} />
+              <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/2802811/pexels-photo-2802811.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
+              <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/758907/pexels-photo-758907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
+              <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/1238949/pexels-photo-1238949.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")' }} />
+              <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/3756235/pexels-photo-3756235.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
+              <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/8448573/pexels-photo-8448573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
+              <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/5175616/pexels-photo-5175616.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")' }} />
+              <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/8634265/pexels-photo-8634265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
+              <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/1716400/pexels-photo-1716400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
+            </div>
           </div>
         </div>
       </div>
