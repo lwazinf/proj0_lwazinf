@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 
 .container {
   width: 100%;
@@ -33,43 +34,119 @@
 }
 
 ._dashboardImage {
+  transition: all 0.1s;
   width: 800px;
   height: 300px;
 
-  background-size: cover;
-  background-position-y: center;
+  background-size: 120%;
+  background-position-y: -200px;
   border-radius: 10px;
-  margin-bottom: 10px;  
+  margin-bottom: 15px;  
 
-  filter: grayscale(1);
+  filter: grayscale(0);
 }
 
-._dashboardImageFilter {
+._dashboardImageProfile {
+  transition: all 0.1s;
+  width: 170px;
+  height: 170px;
+
+  background-size: 500px;
+  background-position-y: center;
+  border-radius: 50%;
+  margin: 20px;
+  margin-left: -40px;
+
+  border: 4px solid white;
+
+  filter: grayscale(0);
+
+  position: absolute;
+  bottom: 0px;
+}
+
+._dashboardImageDetail {
+  /* width: 100px; */
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 30px;
+  background: white;
+  position: absolute;
+  bottom: 45px;
+  left: 100px;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+._dashboardImageDetail1 {
+  /* width: 100px; */
+  padding-left: 10px;
+  padding-right: 5px;
+  height: 20px;
+  /* background: white; */
+  position: absolute;
+  bottom: 20px;
+  left: 100px;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+}
+
+._dashboardImageHolder, ._dashboardImageFilter {
   width: 100%;
   height: 100%;
-
-  background: rgb(0, 0, 0);
-  background: -moz-linear-gradient(
-    54deg,
-    rgba(0, 0, 0, 0.5396359227284664) 0%,
-    rgba(255, 255, 255, 0.267927239255077) 61%
-  );
-  background: -webkit-linear-gradient(
-    54deg,
-    rgba(0, 0, 0, 0.5396359227284664) 0%,
-    rgba(255, 255, 255, 0.267927239255077) 61%
-  );
-  background: linear-gradient(
-    54deg,
-    rgba(0, 0, 0, 0.5396359227284664) 0%,
-    rgba(255, 255, 255, 0.267927239255077) 61%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);
 
   border-radius: 10px;
   margin-bottom: 10px;
   transition: all 0.5s;
   opacity: 1;
+
+  position: relative;
+}
+
+._dashboardImageHolder {
+  /* transition: all 0.5s; */
+  background: rgb(0,0,0);
+  background: -moz-linear-gradient(18deg, rgba(0,0,0,0.6693277994791666) 33%, rgba(255,255,255,0.0) 66%);
+  background: -webkit-linear-gradient(18deg, rgba(0,0,0,0.6693277994791666) 33%, rgba(255,255,255,0.0) 66%);
+  background: linear-gradient(18deg, rgba(0,0,0,0.6693277994791666) 33%, rgba(255,255,255,0.0) 66%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);  
+}
+
+._dashboardImageFilter {
+  background: rgb(0, 0, 0);
+  background: -moz-linear-gradient(
+    54deg,
+    rgba(0, 0, 0, 0.7396359227284664) 20%,
+    rgba(255, 255, 255, 0.267927239255077) 61%
+  );
+  background: -webkit-linear-gradient(
+    54deg,
+    rgba(0, 0, 0, 0.7396359227284664) 20%,
+    rgba(255, 255, 255, 0.267927239255077) 61%
+  );
+  background: linear-gradient(
+    54deg,
+    rgba(0, 0, 0, 0.7396359227284664) 20%,
+    rgba(255, 255, 255, 0.267927239255077) 61%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);
 }
 
 ._dashboardTitle {
@@ -89,6 +166,7 @@
 
 ._dashboardTitleMain {
   padding-bottom: 0px;
+  padding-top: 2px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -131,18 +209,18 @@
 
 ._dashboardDetails {
   height: 565px;
-  flex: 1;
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   padding-left: 10px;
 }
 
 ._dashboardDetailsMain {
   height: 350px;
+  width: 100%;
   border-radius: 10px;
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -155,9 +233,39 @@
 ._dashboardDetailsInput {
   height: 45px;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 2px 2px 10px 10px;
   background-color: white;
   margin-top: auto;
+}
+
+._dashboardDetailsSecondary {
+  height: 311px;
+  width: 100%;
+
+  border-radius: 10px;
+  /* background-color: grey; */
+  padding: 5px;
+  padding-top: 10px;
+  overflow: hidden;
+}
+
+._dashboardDetailsSecondaryTitle {
+  height: 45px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+
+  border-radius: 5px;
+  padding-top: 10px;
+  /* background-color: black; */
+  /* margin-top: auto; */
 }
 
 ._dashboardOptions {
@@ -191,10 +299,11 @@
 }
 
 ._dashboardOptionImage {
+  transition: all 0.8s;
   width: 382.5px;
   height: 150px;
   
-  background-size: cover;
+  background-size: 100%;
   background-position-y: center;
   border-radius: 10px;
   margin-left: auto;
@@ -202,6 +311,12 @@
   margin-top: 2.5px;
 
   filter: grayscale(1);
+}
+
+._dashboardOptionImage:hover {
+  transition: all 0.3s;
+  filter: grayscale(0);
+  background-size: 95%;
 }
 
 ._buttons {

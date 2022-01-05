@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import ReactCountryFlag from "react-country-flag"
 
 export default function Home() {
   return (
@@ -22,15 +23,41 @@ function Dashboard() {
   return (
     <div className={styles._dashboard}>
       <div className={styles._dashboardVisual}>
-        <div className={styles._dashboardImage} style={{ backgroundImage: 'url("https://images.pexels.com/photos/3289156/pexels-photo-3289156.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")', filter: 'none' }}>
-          {/* <div className={styles._dashboardImageFilter}/> */}
+        <div className={styles._dashboardImage} style={{ backgroundImage: 'url("https://images.pexels.com/photos/1306791/pexels-photo-1306791.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")', filter: 'none'}}>
+          <div className={styles._dashboardImageHolder}>
+            <div className={styles._dashboardImageProfile} style={{ backgroundImage: 'url("https://images.pexels.com/photos/1097470/pexels-photo-1097470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")', filter: 'none', backgroundPositionX: '-60px' }} />
+            <div className={styles._dashboardImageDetail}>
+              @LwaziNF • 28 <ReactCountryFlag countryCode="ZA" svg style={{ marginLeft: '5px' }} />
+            </div>
+            <div className={styles._dashboardImageDetail1}>
+              Lwazi Ndlovu, seasoned drummer.
+            </div>
+          </div>
         </div>
+
         <div className={styles._dashboardTitle}>
           <div style={{ opacity: '0.6', marginTop: '5px', marginRight: '10px' }}>
             <Image height={20} width={20} alt={''} src={'/assets/images/icons/add.png'} />
           </div>
           <div className={styles._dashboardTitleMain}>
-            Drops by you
+            Your Drops
+          </div>
+          <div className={styles._dashboardTitleDropdown}>
+            <div className={styles._dashboardTitleSecondary}>
+              Date Created
+            </div>
+            <div className={styles._dashboardTitleArrow}>
+              <Image height={14} width={14} alt={''} src={'/assets/images/icons/down_arrow.png'} />
+            </div>
+          </div>
+        </div>
+
+        <div className={styles._dashboardTitle}>
+          <div style={{ opacity: '0.6', marginTop: '5px', marginRight: '10px' }}>
+            <Image height={30} width={30} alt={''} src={'/assets/images/icons/people.png'} />
+          </div>
+          <div className={styles._dashboardTitleMain}>
+            Featured Artists
           </div>
           <div className={styles._dashboardTitleDropdown}>
             <div className={styles._dashboardTitleSecondary}>
@@ -41,9 +68,10 @@ function Dashboard() {
             </div>
           </div>
         </div>
+        
         <div className={styles._dashboardOptions}>
           <div className={styles._dashboardOption}>
-            <div className={styles._dashboardOptionImage} style={{ backgroundImage: 'url("https://images.pexels.com/photos/5948139/pexels-photo-5948139.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }}>
+            <div className={styles._dashboardOptionImage} style={{ backgroundImage: 'url("https://images.pexels.com/photos/1362371/pexels-photo-1362371.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")' }}>
               <div className={styles._dashboardImageFilter} />
             </div>
             <div className={styles._buttons}>
@@ -62,29 +90,37 @@ function Dashboard() {
             </div>
           </div>
           <div className={styles._dashboardOption}>
-            <div className={styles._dashboardOptionImage} style={{ backgroundImage: 'url("https://images.pexels.com/photos/5990679/pexels-photo-5990679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }}>
+            <div className={styles._dashboardOptionImage} style={{ backgroundImage: 'url("https://images.pexels.com/photos/1578541/pexels-photo-1578541.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }}>
               <div className={styles._dashboardImageFilter} />
             </div>
-              <div className={styles._buttons}>
-                <div className={styles._baseButton}>
-                  <Image height={25} width={25} alt={''} src={'/assets/images/icons/play.png'} />
-                </div>
-                <div className={styles._player}>
-                  <div className={styles._playerDot} />
-                </div>
-                <div className={styles._baseButton}>
-                  <Image height={25} width={25} alt={''} src={'/assets/images/icons/location.png'} />
-                </div>
-                <div className={styles._baseButton}>
-                  <Image height={30} width={30} alt={''} src={'/assets/images/icons/cloud.png'} />
-                </div>
+            <div className={styles._buttons}>
+              <div className={styles._baseButton}>
+                <Image height={25} width={25} alt={''} src={'/assets/images/icons/play.png'} />
               </div>
+              <div className={styles._player}>
+                <div className={styles._playerDot} />
+              </div>
+              <div className={styles._baseButton}>
+                <Image height={25} width={25} alt={''} src={'/assets/images/icons/location.png'} />
+              </div>
+              <div className={styles._baseButton}>
+                <Image height={30} width={30} alt={''} src={'/assets/images/icons/cloud.png'} />
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div className={styles._dashboardDetails}>
         <div className={styles._dashboardDetailsMain}>
           <div className={styles._dashboardDetailsInput} />
+        </div>
+        <div className={styles._dashboardDetailsSecondary}>
+          <div className={styles._dashboardDetailsSecondaryTitle}>
+            <div style={{ opacity: '0.6', marginTop: '5px', marginRight: '10px' }}>
+              <Image height={20} width={20} alt={''} src={'/assets/images/icons/location.png'} />
+            </div>
+            Artists Nearby
+          </div>
         </div>
       </div>
     </div>
