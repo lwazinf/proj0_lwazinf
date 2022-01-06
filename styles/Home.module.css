@@ -227,7 +227,7 @@
   height: 850px;
   /* background: blue; */
   width: 100%;
-  diplay: flex;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
