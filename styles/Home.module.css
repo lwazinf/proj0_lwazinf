@@ -224,10 +224,10 @@
 }
 
 ._dashboardDetails {
-  height: 620px;
+  height: 850px;
   /* background: blue; */
   width: 100%;
-  display: flex;
+  diplay: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -276,6 +276,8 @@
   padding-right: 0px;
   padding-left: 0px;
   background-color: rgba(0, 0, 0, 0.1);
+
+  border: solid lightgray 0.8px;
 }
 
 ._dashboardArtist1Detail {
@@ -297,7 +299,7 @@
 }
 
 ._dashboardDetailsSecondary {
-  height: 311px;
+  /* height: 511px; */
   width: 100%;
 
   border-radius: 10px;
@@ -457,7 +459,7 @@
 
 ._dashboardArtistsTertiary {
   overflow-y: scroll;
-  height: 300px;
+  /* height: 300px; */
   width: 100%;
   z-index: 100;
 }
