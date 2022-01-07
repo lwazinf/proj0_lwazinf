@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
 
 .container {
   width: 100%;
@@ -9,7 +9,7 @@
 
 .main {
   min-height: 100vh;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,11 +26,14 @@
 }
 
 ._dashboardVisual {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
+  width: 800px;
+
+  /* background: yellow; */
 }
 
 ._dashboardImage {
@@ -41,7 +44,7 @@
   background-size: 120%;
   background-position-y: -200px;
   border-radius: 10px;
-  margin-bottom: 15px;  
+  margin-bottom: 15px;
 
   filter: grayscale(0);
 }
@@ -102,13 +105,14 @@
   justify-content: center;
   align-items: center;
 
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   font-weight: 500;
   font-size: 18px;
   color: white;
 }
 
-._dashboardImageContainer, ._dashboardImageFilter {
+._dashboardImageContainer,
+._dashboardImageFilter {
   transition: all 0.5s;
   width: 100%;
   height: 100%;
@@ -123,11 +127,23 @@
 }
 
 ._dashboardImageContainer {
-  background: rgb(0,0,0);
-  background: -moz-linear-gradient(18deg, rgba(0,0,0,0.6693277994791666) 33%, rgba(255,255,255,0.0) 66%);
-  background: -webkit-linear-gradient(18deg, rgba(0,0,0,0.6693277994791666) 33%, rgba(255,255,255,0.0) 66%);
-  background: linear-gradient(18deg, rgba(0,0,0,0.6693277994791666) 33%, rgba(255,255,255,0.0) 66%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);  
+  background: rgb(0, 0, 0);
+  background: -moz-linear-gradient(
+    18deg,
+    rgba(0, 0, 0, 0.6693277994791666) 33%,
+    rgba(255, 255, 255, 0) 66%
+  );
+  background: -webkit-linear-gradient(
+    18deg,
+    rgba(0, 0, 0, 0.6693277994791666) 33%,
+    rgba(255, 255, 255, 0) 66%
+  );
+  background: linear-gradient(
+    18deg,
+    rgba(0, 0, 0, 0.6693277994791666) 33%,
+    rgba(255, 255, 255, 0) 66%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);
 }
 
 ._dashboardImageFilter {
@@ -238,9 +254,6 @@
 
 ._dashboardDetailsGrid {
   width: 90%;
-  height: 150px;
-
-  margin-bottom: 10px;
 
   display: grid;
   grid-row-gap: -10px;
@@ -250,14 +263,13 @@
 ._dashboardDetails {
   height: 850px;
   /* background: blue; */
-  width: 100%;
+  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   /* align-items: center; */
   padding-left: 10px;
   margin: 0px;
-
 }
 
 ._dashboardDetailsMain {
@@ -280,7 +292,7 @@
   opacity: 0.7;
   height: 68px;
   width: 98%;
-  
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -313,7 +325,7 @@
   opacity: 0.7;
   height: 190px;
   width: 190px;
-  
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -345,7 +357,7 @@
   width: 200px;
   margin-left: auto;
   margin-right: auto;
-  
+
   /* background: red; */
 
   display: flex;
@@ -398,8 +410,6 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-
-  margin-bottom: 10px;
 }
 
 ._dashboardOption {
@@ -423,7 +433,7 @@
   transition: all 0.8s;
   width: 382.5px;
   height: 150px;
-  
+
   background-size: 100%;
   background-position-y: center;
   border-radius: 10px;
@@ -471,11 +481,9 @@
 ._dashboardArtists {
   display: grid;
   grid-row-gap: 3px;
-  grid-template-columns: repeat(3, 1fr);
-
-  margin-top: 12px;
-  height: auto;
-  margin-bottom: 50px;
+  grid-column-gap: 3px;
+  grid-template-columns: repeat(6, 1fr);
+  /* margin-bottom: 10px; */
 }
 
 ._dashboardArtist {
@@ -520,9 +528,12 @@
 
 ._dashboardArtistsTertiary {
   overflow-y: scroll;
-  /* height: 300px; */
+  height: initial;
   width: 100%;
   z-index: 100;
+
+  padding: 0px;
+  margin: 0px;
 }
 
 ._truncate {
@@ -531,4 +542,522 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ._dashboard {
+    width: 100%;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px;
+  }
+
+  ._dashboardVisual {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+    margin: 0px;
+  }
+
+  ._dashboardImage {
+    transition: all 0.1s;
+    width: 100%;
+    height: 250px;
+
+    border-radius: 0px;
+
+    margin-bottom: 40px;
+  }
+
+  ._dashboardImageProfile {
+    transition: all 0.1s;
+    width: 140px;
+    height: 140px;
+
+    margin: 20px;
+
+    border: 1px solid white;
+    bottom: -50px;
+
+    z-index: 2;
+  }
+
+  ._dashboardImageDetail {
+    bottom: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    left: 147px;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+
+    padding-left: 15px;
+  }
+
+  ._dashboardImageDetail1 {
+    padding-left: 0px;
+    padding-right: 0px;
+
+    bottom: -25px;
+    left: 155px;
+
+    color: black;
+  }
+
+  ._dashboardImageContainer,
+  ._dashboardImageFilter {
+    transition: all 0.5s;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+    transition: all 0.5s;
+    opacity: 1;
+
+    position: relative;
+  }
+
+  ._dashboardImageContainer {
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(
+      18deg,
+      rgba(0, 0, 0, 0.6693277994791666) 33%,
+      rgba(255, 255, 255, 0) 66%
+    );
+    background: -webkit-linear-gradient(
+      18deg,
+      rgba(0, 0, 0, 0.6693277994791666) 33%,
+      rgba(255, 255, 255, 0) 66%
+    );
+    background: linear-gradient(
+      18deg,
+      rgba(0, 0, 0, 0.6693277994791666) 33%,
+      rgba(255, 255, 255, 0) 66%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);
+
+    padding: 0px;
+  }
+
+  ._dashboardImageFilter {
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(
+      54deg,
+      rgba(0, 0, 0, 0.7396359227284664) 20%,
+      rgba(255, 255, 255, 0.267927239255077) 61%
+    );
+    background: -webkit-linear-gradient(
+      54deg,
+      rgba(0, 0, 0, 0.7396359227284664) 20%,
+      rgba(255, 255, 255, 0.267927239255077) 61%
+    );
+    background: linear-gradient(
+      54deg,
+      rgba(0, 0, 0, 0.7396359227284664) 20%,
+      rgba(255, 255, 255, 0.267927239255077) 61%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);
+  }
+
+  ._dashboardTitle {
+    width: 100%;
+    height: 50px;
+    /* background-color: rgba(0, 0, 0, 0.05); */
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  ._dashboardTitleMain {
+    padding-bottom: 0px;
+    padding-top: 2px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    margin-right: 5px;
+  }
+
+  ._dashboardTitleSecondary {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: rgb(125, 125, 125);
+    margin-left: 15px;
+  }
+
+  ._dashboardTitleDropdown {
+    width: 150px;
+    height: 40px;
+    margin-left: auto;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  ._dashboardTitleArrow {
+    opacity: 0.4;
+    margin-left: auto;
+    margin-right: 10px;
+    height: 50px;
+    width: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ._dashboardTitleArrow1 {
+    opacity: 0.4;
+    margin-left: auto;
+    margin-right: 20px;
+    height: 80px;
+    width: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transform: rotate(-90deg);
+  }
+
+  ._dashboardTitleArrow2 {
+    opacity: 0.4;
+    margin-left: auto;
+    margin-right: 20px;
+    height: 80px;
+    width: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ._dashboardDetailsGrid {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  ._dashboardDetails {
+    height: 100%;
+    /* background: blue; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align-items: center; */
+    padding-left: 0px;
+    margin: 0px;
+  }
+
+  ._dashboardDetailsMain {
+    height: initial;
+
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  ._dashboardDetailsInput {
+    transition: all 0.5s;
+
+    opacity: 0.7;
+    height: 68px;
+    width: 98%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding-right: 10px;
+    padding-left: 15px;
+
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.05);
+    margin: 0px;
+    margin-bottom: 5px;
+  }
+
+  ._dashboardDetailsInput:hover {
+    transition: all 0.5s;
+    opacity: 1;
+    height: 80px;
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    border: solid lightgray 0.8px;
+  }
+
+  ._dashboardDetailsInput1 {
+    transition: all 0.5s;
+
+    opacity: 0.7;
+    height: 190px;
+    width: 190px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding-right: 10px;
+    padding-left: 15px;
+
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.05);
+    margin: 0px;
+    margin-bottom: 5px;
+  }
+
+  ._dashboardDetailsInput1:hover {
+    transition: all 0.5s;
+    opacity: 1;
+    height: 80px;
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    border: solid lightgray 0.8px;
+  }
+
+  ._dashboardArtist1Detail {
+    height: 38px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* background: red; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  ._dashboardDetailsSecondary {
+    /* height: 511px; */
+    width: 100%;
+
+    border-radius: 10px;
+    /* background-color: grey; */
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  ._dashboardDetailsSecondaryTitle {
+    height: 45px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+
+    border-radius: 5px;
+    padding-top: 10px;
+    /* background-color: black; */
+    /* margin-top: auto; */
+  }
+
+  ._dashboardOptions {
+    width: 100%;
+    height: initial;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 0px;
+  }
+
+  ._dashboardOption {
+    transition: all 0.3s;
+    width: 400px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    margin: 5px;
+    position: relative;
+    top: 0px;
+  }
+
+  ._dashboardOption:hover {
+    transition: all 0.3s;
+    height: 225px;
+    top: -10px;
+  }
+
+  ._dashboardOptionImage {
+    transition: all 0.8s;
+    width: 382.5px;
+    height: 150px;
+
+    background-size: 100%;
+    background-position-y: center;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5px;
+
+    filter: grayscale(1);
+  }
+
+  ._dashboardOptionImage:hover {
+    transition: all 0.3s;
+    filter: grayscale(0);
+    background-size: 95%;
+  }
+
+  ._buttons {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  ._baseButton {
+    margin: 5px;
+  }
+
+  ._player {
+    width: 100%;
+    height: 2px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background: grey;
+  }
+
+  ._playerDot {
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    margin-top: -4px;
+  }
+
+  ._dashboardArtists {
+    margin-top: 0px;
+    margin-bottom: -15px;
+    
+    width: 100%;
+    height: 105px;
+
+    overflow-x: auto;
+    /* background: red; */
+
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+  }
+
+  ._dashboardArtist {
+    transition: all 0.5s;
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-size: cover;
+    filter: grayscale(0.8);
+  }
+
+  ._dashboardArtist:hover {
+    transition: all 0.1s;
+    /* background-size: 140%; */
+    background-position-y: top;
+    width: 105px;
+    height: 105px;
+    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    filter: grayscale(0);
+  }
+
+  ._dashboardArtist1 {
+    transition: all 0.5s;
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+    margin-right: 0px;
+    margin-left: 20px;
+
+    background-size: cover;
+    background-position-y: center;
+  }
+
+  ._dashboardArtistsTertiary {
+    overflow-y: scroll;
+    /* height: 300px; */
+    width: 100%;
+    z-index: 100;
+  }
+
+  ._truncate {
+    width: 180px;
+    height: 38px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
