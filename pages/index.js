@@ -37,13 +37,15 @@ function Dashboard() {
           </div>
         </div>
 
-        <div className={styles._dashboardArtists}>
-          <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/2350325/pexels-photo-2350325.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")', backgroundPositionY: 'center' }} />
-          <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/2802811/pexels-photo-2802811.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
-          <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/3756235/pexels-photo-3756235.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
-          <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/8448573/pexels-photo-8448573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
-          <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/8634265/pexels-photo-8634265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
-          <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/1716400/pexels-photo-1716400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
+        <div className={styles._dashboardArtistsContainer}>
+          <div className={styles._dashboardArtists}>
+            <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/2350325/pexels-photo-2350325.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")', backgroundPositionY: 'center' }} />
+            <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/2802811/pexels-photo-2802811.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
+            <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/3756235/pexels-photo-3756235.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
+            <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/8448573/pexels-photo-8448573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
+            <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/8634265/pexels-photo-8634265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
+            <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/1716400/pexels-photo-1716400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
+          </div>
         </div>
 
         <div className={styles._dashboardTitle}>
@@ -209,7 +211,7 @@ function Dashboard() {
 
         <div className={styles._dashboardDetailsSecondary}>
 
-          <div className={styles._dashboardTitle}>
+          {/* <div className={styles._dashboardTitle}>
             <div style={{ opacity: '0.6', marginTop: '5px', marginRight: '10px' }}>
               <Image height={25} width={25} alt={''} src={'/assets/images/icons/location.png'} />
             </div>
@@ -224,21 +226,8 @@ function Dashboard() {
                 <Image height={14} width={14} alt={''} src={'/assets/images/icons/down_arrow.png'} />
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className={styles._dashboardArtistsTertiary}>
-            {/* <div className={styles._dashboardArtists}>
-              <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/2350325/pexels-photo-2350325.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")', backgroundPositionY: 'center' }} />
-              <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/2802811/pexels-photo-2802811.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
-              <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/758907/pexels-photo-758907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
-              <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/1238949/pexels-photo-1238949.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")' }} />
-              <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/3756235/pexels-photo-3756235.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
-              <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/8448573/pexels-photo-8448573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
-              <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/5175616/pexels-photo-5175616.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")' }} />
-              <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/8634265/pexels-photo-8634265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
-              <div className={styles._dashboardArtist} style={{ backgroundImage: 'url("https://images.pexels.com/photos/1716400/pexels-photo-1716400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")' }} />
-            </div> */}
-          </div>
         </div>
       </div>
     </div >
