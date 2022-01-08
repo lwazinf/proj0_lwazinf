@@ -3,30 +3,37 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import ReactCountryFlag from "react-country-flag"
 
+import { db } from "../firebase";
+import { collection, addDoc } from "@firebase/firestore";
+
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Proj0 • Music • LwaziNF</title>
-        <meta name="" content="" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main className={styles.main}>
         <Dashboard />
       </main>
-    </div>
   )
 }
 
 function Dashboard() {
+
+  const onSubmit = async () => {
+    // if (email.includes('@') && email.includes('.') && email.length > 5 && msg.length > 0 && name.length > 0) {
+        const collectionRef = collection(db, "customerList");
+        const set = { name: "Hello World" }
+        const time = Date();
+        const docRef = await addDoc(collectionRef, { ...set, time });
+    // } else {
+    //     console.log('Error')
+    // }
+};
+
   return (
     <div className={styles._dashboard}>
       <div className={styles._dashboardVisual}>
         <div className={styles._dashboardImage} style={{ backgroundImage: 'url("https://images.pexels.com/photos/1306791/pexels-photo-1306791.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")', filter: 'none' }}>
           <div className={styles._dashboardImageContainer}>
 
-            <div className={styles._dashboardImageProfile} style={{ backgroundImage: 'url("https://images.pexels.com/photos/1097470/pexels-photo-1097470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")', filter: 'none', backgroundPositionX: '-60px' }} />
+            <div onClick={ onSubmit } className={styles._dashboardImageProfile} style={{ backgroundImage: 'url("https://images.pexels.com/photos/1097470/pexels-photo-1097470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")', filter: 'none', backgroundPositionX: '-60px' }} />
             <div className={styles._dashboardImageDetail}>
               @LwaziNF • 28 <ReactCountryFlag countryCode="ZA" svg style={{ marginLeft: '5px' }} />
             </div>
@@ -111,7 +118,7 @@ function Dashboard() {
             <Image height={20} width={20} alt={''} src={'/assets/images/icons/add.png'} />
           </div>
           <div className={styles._dashboardTitleMain}>
-            User Drops
+            Drops
           </div>
           <div className={styles._dashboardTitleDropdown}>
             <div className={styles._dashboardTitleSecondary}>
@@ -161,7 +168,7 @@ function Dashboard() {
       <div className={styles._dashboardDetails}>
         <div className={styles._dashboardDetailsMain}>
 
-          <div className={styles._dashboardTitle}>
+          {/* <div className={styles._dashboardTitle}>
             <div style={{ opacity: '0.6', marginTop: '5px', marginRight: '10px', marginLeft: '-10px' }}>
               <Image height={30} width={30} alt={''} src={'/assets/images/icons/glasses.png'} />
             </div>
@@ -176,7 +183,7 @@ function Dashboard() {
                 <Image height={14} width={14} alt={''} src={'/assets/images/icons/down_arrow.png'} />
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className={styles._dashboardDetailsInput} >
             <div className={styles._dashboardArtist1} style={{ backgroundImage: 'url("https://images.pexels.com/photos/2350325/pexels-photo-2350325.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")' }} />

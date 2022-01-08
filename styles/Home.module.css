@@ -962,7 +962,7 @@
     margin-right: auto;
     margin-top: 2.5px;
 
-    filter: grayscale(1);
+    filter: grayscale(0);
   }
 
   ._dashboardOptionImage:hover {
@@ -1016,6 +1016,7 @@
   
     ._dashboardArtistsContainer {
     margin-bottom: -15px;
+    /* overflow-x: hidden; */
   }
 
   ._dashboardArtist {
