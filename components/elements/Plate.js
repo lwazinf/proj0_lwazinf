@@ -6,7 +6,7 @@ function Plate() {
   return (
     <div className={styles._container} >
 
-      <Component />
+      <Component /> 
 
     </div>
   );
