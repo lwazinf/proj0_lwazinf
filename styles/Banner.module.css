@@ -1,0 +1,145 @@
+._container {
+  transition: all 0.1s;
+  width: 800px;
+  height: 300px;
+
+  background-size: 120%;
+  background-position-y: -200px;
+  border-radius: 10px;
+}
+
+._zero {
+  background: rgb(0, 0, 0);
+  background: -moz-linear-gradient(
+    18deg,
+    rgba(0, 0, 0, 0.6693277994791666) 33%,
+    rgba(255, 255, 255, 0) 66%
+  );
+  background: -webkit-linear-gradient(
+    18deg,
+    rgba(0, 0, 0, 0.6693277994791666) 33%,
+    rgba(255, 255, 255, 0) 66%
+  );
+  background: linear-gradient(
+    18deg,
+    rgba(0, 0, 0, 0.6693277994791666) 33%,
+    rgba(255, 255, 255, 0) 66%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);
+
+  transition: all 0.5s;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 10px;
+  padding-bottom: 0;
+  transition: all 0.5s;
+  opacity: 1;
+
+  position: relative;
+}
+
+._zeroA {
+  transition: all 0.1s;
+  width: 170px;
+  height: 170px;
+
+  background-size: 500px;
+  background-position-y: center;
+  border-radius: 50%;
+  margin: 20px;
+  margin-left: -40px;
+
+  border: 4px solid white;
+
+  filter: grayscale(0);
+
+  position: absolute;
+  bottom: 20px;
+}
+
+._zeroB {
+  /* width: 100px; */
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 30px;
+  background: white;
+  position: absolute;
+  bottom: 65px;
+  left: 100px;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+._zeroC {
+  height: 20px;
+
+  position: absolute;
+  bottom: 40px;
+  left: 100px;
+
+  padding-left: 10px;
+  padding-right: 5px;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  ._container {
+    width: 100%;
+    border-radius: initial;
+    background-position: bottom;
+  }
+
+  ._zero {
+    border-radius: 0px;
+  }
+
+  ._zeroA {
+    width: 140px;
+    height: 140px;
+    bottom: -40px;
+    left: 20px;
+    margin: 0px;
+
+    z-index: 2;
+
+    border-width: 2px;
+  }
+
+  ._zeroB {
+    bottom: 0px;
+    left: 140px;
+    margin: 0px;
+    padding-left: 20px;
+
+    z-index: 1;
+
+    border-bottom-right-radius: 0px;
+  }
+
+  ._zeroC {
+    bottom: -25px;
+    left: 145px;
+    margin: 0px;
+
+    color: black;
+  }
+}

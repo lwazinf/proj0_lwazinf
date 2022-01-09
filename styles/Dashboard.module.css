@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+
+._container {
+  width: 1200px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding: 10px;
+}
+
+._zero {
+  width: 800px;
+  min-height: 300px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  /* background: yellow; */
+}
+
+._one {
+  min-height: 300px;
+  width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+  margin: 0px;
+  /* background: blue; */
+}
+
+._oneA {
+  height: 300px;
+  width: 400px;
+  
+  /* background: teal; */
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  ._container {
+    width: 100%;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  
+    padding: 0px;
+  }
+
+  ._zero {
+    width: 100%;
+    min-height: 300px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  
+    /* background: yellow; */
+
+    padding: 0px;
+  }
+
+}

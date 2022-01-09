@@ -16,8 +16,8 @@ const Layout = ({ children }) => {
                 <meta name="" content="" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-
-            {children}
+        
+                {children}
 
         </div>
     );
